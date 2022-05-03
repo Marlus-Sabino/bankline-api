@@ -11,8 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity	
-@Table(name = "tab_correntista")
+@Entity
+@Table(name = "tab_movimentacao")
 public class Movimentacao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +27,10 @@ public class Movimentacao {
 	
 	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
+	
+	@Column(name = "id_conta")
+	private Integer IdConta;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -57,6 +61,11 @@ public class Movimentacao {
 	public void setTipo(MovimentacaoTipo tipo) {
 		this.tipo = tipo;
 	}
+	public Integer getIdConta() {
+		return IdConta;
+	}
+	public void setIdConta(Integer idConta) {
+		IdConta = idConta;
+	}
 	
-
 }

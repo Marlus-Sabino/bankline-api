@@ -1,13 +1,14 @@
 package com.dio.santander.bankline.api.model;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity	
+@Entity
 @Table(name = "tab_correntista")
 public class Correntista {
 	@Id
@@ -20,7 +21,7 @@ public class Correntista {
 	@Column(length =60)
 	private String nome;
 	
-	@Embebed
+	@Embedded
 	private Conta conta;
 	
 	public Conta getConta() {
