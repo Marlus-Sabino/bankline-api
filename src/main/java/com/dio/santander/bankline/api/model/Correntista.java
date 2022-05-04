@@ -16,37 +16,44 @@ public class Correntista {
 	private Integer Id;
 	
 	@Column(length = 20)
-	private String CPF;
+	private String cpf;
 	
 	@Column(length =60)
 	private String nome;
 	
 	@Embedded
 	private Conta conta;
-	
-	public Conta getConta() {
-		return conta;
-	}
-	public void setConta(Conta conta) {
-		this.conta = conta;
-	}
+
 	public Integer getId() {
 		return Id;
 	}
+
 	public void setId(Integer id) {
 		Id = id;
 	}
-	public String getCPF() {
-		return CPF;
+
+	public String getCpf() {
+		return cpf;
 	}
-	public void setCPF(String cPF) {
-		CPF = cPF;
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public Conta getConta() {
+		return conta;
+	}
+
+	public void setConta(Conta conta) {
+		this.conta = conta;
 	}
 	
 	
